@@ -12,13 +12,17 @@
 
 ## Getting started
 
-- navigate into the cockit-cms folder
-- run `npm start`, to download the appropriate docker container from agentejo and start it
-- when the container finished starting, run `docker:copyFiles`
-- once it finished copying our exported files to the docker container, run `npm run docker:login`
-- on the docker container, run `./cp import --src ./cockpitData`
+### Starting the cockpit-cms docker container and import initial data
+
+- navigate into the cockpit-cms folder
+- run `npm run docker`, to download and start the appropriate docker container from agentejo
+- once the container finished starting, run `docker:copyFiles`
+- after copying our cockpitData to the docker container, run `npm run docker:login`
+- on the docker container, run `./cp import --src ./cockpitData` to import our initial data to our cockpit-cms
+- now navigate to localhost:8080 and login with admin/admin
+- when everything worked out, you should now see 6 added singletons on the right
 
 ### export files
 
 - `npm run docker:login`
-- `sudo docker cp cockpit:/cockpitData ./cockpitData`
+- `sudo docker cp cockpit:/var/www/html/cockpitData ./cockpitData`

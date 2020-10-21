@@ -1,0 +1,14 @@
+[
+  {
+    "user": "admin",
+    "name": "Admin",
+    "email": "admin@yourdomain.de",
+    "active": true,
+    "group": "admin",
+    "password": "$2y$10$cXTAJ2o/XSAtduY43KmydeD3MPbUEXCf0zJH2kT5nDVXjc7gGu8ju",
+    "i18n": "en",
+    "_created": 1603278943,
+    "_modified": 1603278943,
+    "_id": "5f90185ff0873515937b2cf1"
+  }
+]

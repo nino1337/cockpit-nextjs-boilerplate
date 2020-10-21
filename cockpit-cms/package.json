@@ -3,7 +3,8 @@
   "version": "0.11.2",
   "license": "MIT",
   "scripts": {
-    "start": "docker run -d --name cockpit -p 8080:80 agentejo/cockpit",
+    "start": "docker run cockpit",
+    "docker": "docker run -d --name cockpit -p 8080:80 agentejo/cockpit",
     "docker:login": "docker exec -it cockpit /bin/bash",
     "docker:copyFiles": "docker cp ./cockpitData cockpit:/cockpitData"
   },
