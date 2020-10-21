@@ -1,0 +1,19 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "dotenv next dev",
+    "build": "dotenv -e .env.production next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "dotenv": "^8.2.0",
+    "dotenv-cli": "^4.0.0",
+    "next": "9.5.5",
+    "next-images": "^1.6.0",
+    "react": "17.0.0",
+    "react-dom": "17.0.0"
+  }
+}
