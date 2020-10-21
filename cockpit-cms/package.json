@@ -3,14 +3,9 @@
   "version": "0.11.2",
   "license": "MIT",
   "scripts": {
-    "build": "npm run build-style && npm run build-components",
-    "build-style": "lessc assets/app/css/style.less > assets/app/css/style.css -x",
-    "build-components": "riot modules/Cockpit/assets/components modules/Cockpit/assets/components.js",
-    "watch": "npm run watch-style & npm run watch-components",
-    "watch-style": "watch-run -i -p 'assets/app/css/**/*.less' npm run build-style",
-    "watch-components": "watch-run -i -p 'modules/Cockpit/assets/components/*.tag' npm run build-components",
-    "docker-init": "docker build -t cockpit/dev .",
-    "docker": "docker run -d --name cockpit -p 8080:80 agentejo/cockpit & open http://localhost:8080/install"
+    "start": "docker run -d --name cockpit -p 8080:80 agentejo/cockpit",
+    "docker:login": "docker exec -it cockpit /bin/bash",
+    "docker:copyFiles": "docker cp ./cockpitData cockpit:/cockpitData"
   },
   "devDependencies": {
     "less": "^2.6.0",
