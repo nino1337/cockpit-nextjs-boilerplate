@@ -43,10 +43,14 @@ Before starting to set up the workflow, make sure to have **Node** and **docker*
 
 ![env VARIABLES](/assets/env-vars.png)
 
-- COCKPIT-API-KEY yields the MASTER API-KEY, we generated in cockpit
-- API-BASE-URL is the base url, where our docker service runs. Make sure to adjust, if you've started the cockpit container on another port.
+> COCKPIT-API-KEY yields the MASTER API-KEY, we generated in cockpit
+> API-BASE-URL is the base url, where our docker service runs. Make sure to adjust, if you've started the cockpit container on another port.
 
 5. start the workflow with `npm run dev`. Open http://localhost:3000 and navigate between the pages. For now, they just yield a headline, that is maintained in cockpit.
+
+## How it works
+
+...
 
 ## How-To's
 
@@ -64,13 +68,3 @@ If you've used the cockpit cms to change data, like adding more singletons, fiel
 2. open **[page].js** in our client folder, and add the name of the singleton we just created to the **getStaticPaths Function** as a new page
 
 > Make sure, that the singleton name and the page name must be equal. Furthermore, the page name also represents the url-slug, where the page can be reached at.
-
-## Todo's
-
-- create issues from todo's
-- slim down the configuration process, like executing one npm command to set everything up
-- make importing/exporting easier
-- remove pre defined pages in nextjs and solely create pages from cockpit singletons (but keep pre rendered pages... probably achievable while building the app)
-- add more fields and field groups like meta-information
-- add testing and styled components
-- add README sections, like **How it works**
