@@ -5,7 +5,8 @@ export default function Home({ data }) {
   return (
     <div>
       <Head>
-        <title>{data.headline}</title>
+        <title>{data.metaTitle}</title>
+        <meta name="description" content={data.metaDescription} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
