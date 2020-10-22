@@ -43,8 +43,8 @@ Before starting to set up the workflow, make sure to have **Node** and **docker*
 
 ![env VARIABLES](/assets/env-vars.png)
 
-> COCKPIT-API-KEY yields the MASTER API-KEY, we generated in cockpit
-> API-BASE-URL is the base url, where our docker service runs. Make sure to adjust, if you've started the cockpit container on another port.
+> **COCKPIT-API-KEY** yields the MASTER API-KEY, we generated in cockpit.
+> **API-BASE-URL** is the base url, where our docker service runs. Make sure to adjust, if you've started the cockpit container on another port.
 
 5. start the workflow with `npm run dev`. Open http://localhost:3000 and navigate between the pages. For now, they just yield a headline, that is maintained in cockpit.
 
