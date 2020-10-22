@@ -1,24 +1,11 @@
 {
-  "name": "cockpit-next",
+  "name": "cockpit-cms",
   "version": "0.11.2",
   "license": "MIT",
   "scripts": {
-    "start": "docker run cockpit",
+    "start": "docker start cockpit",
     "docker": "docker run -d --name cockpit -p 8080:80 agentejo/cockpit",
     "docker:login": "docker exec -it cockpit /bin/bash",
     "docker:copyFiles": "docker cp ./cockpitData cockpit:/cockpitData"
-  },
-  "devDependencies": {
-    "less": "^2.6.0",
-    "riot-cli": "^3.0.0",
-    "watch-run": "^1.2.4"
-  },
-  "dependencies": {
-    "opencollective": "^1.0.3"
-  },
-  "collective": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/cockpit",
-    "logo": "https://opencollective.com/opencollective/logo.txt"
   }
 }
