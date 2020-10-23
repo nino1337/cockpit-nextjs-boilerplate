@@ -1,8 +1,14 @@
 import Link from "next/link";
+import { ThemeProvider } from "emotion-theming";
+import { Global } from "@emotion/core";
+
+import theme from "../styles/theme";
+import globalStyle from "../styles/globalStyles";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <ThemeProvider theme={theme}>
+      <Global styles={globalStyle} />
       <ul>
         <li>
           <Link href="/">Startseite</Link>
@@ -23,7 +29,7 @@ function MyApp({ Component, pageProps }) {
       </ul>
 
       <Component {...pageProps} />
-    </>
+    </ThemeProvider>
   );
 }
 

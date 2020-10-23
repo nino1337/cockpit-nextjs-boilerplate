@@ -1,5 +1,8 @@
 import Head from "next/head";
+
+import theme from "../styles/theme";
 import { singletons } from "../axios";
+import Button from "../components/button/Button";
 
 export default function Home({ data }) {
   return (
@@ -11,6 +14,9 @@ export default function Home({ data }) {
       </Head>
 
       <h1>{data.headline}</h1>
+      <Button backgroundColor={theme.colors.grey} color={theme.colors.white}>
+        Button
+      </Button>
     </div>
   );
 }
