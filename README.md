@@ -58,7 +58,7 @@ Before starting to set up the workflow, make sure to have **Node** and **docker*
 - Thus, editing or maintaining something in cockpit, automatically changes files on our local machine and vice versa
 - This brings advantages like importing of initial data on start up and having synchronous data across the team, so make sure to check them into git aswell
 
-#### Master API Key mast match env variable
+#### Master API Key must match env variable
 
 - in cockpit under http://localhost:8080/restadmin/index a MASTER API Key is created, that must match the COCKPIT_API_KEY in our .env.local file
   ![Cockpit CMS Master API Key](/assets/cockpit-master-api-key.png)
