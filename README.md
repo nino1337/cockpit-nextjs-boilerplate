@@ -23,8 +23,8 @@ This repository serves as a boilerplate to kickstart projects, where a content-m
 Before starting to set up the workflow, make sure to have **Node** and **docker** installed on your machine and of course to clone this repo.
 
 1. open a terminal of your choice and navigate into the root of our repository
-2. run `npm i` to install all dependencies
-3. after all dependencies have been installed, run `npm run init` to initial the workflow
+2. install all dependencies with `npm i`
+3. initialise the workflow with `npm run init`
 4. once done, run `npm start`
 5. under http://localhost:8080 you should now be able to log-in with admin/admin. On http://localhost:3000 you should see the frontend with some pre-defined pages you can navigate to.
 6. happy coding
