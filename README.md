@@ -39,7 +39,7 @@ Before starting to set up the workflow, make sure to have **Node** and **docker*
 
 #### Master API Key mast match env variable
 
-- in cockpit under http://localhost:8080/restadmin/index a MASTER API Key is created, that must match the COCKPIT_API_KEY in out .env.local file
+- in cockpit under http://localhost:8080/restadmin/index a MASTER API Key is created, that must match the COCKPIT_API_KEY in our .env.local file
   ![Cockpit CMS Master API Key](/assets/cockpit-master-api-key.png)
   ![env VARIABLES](/assets/env-vars.png)
 
