@@ -4,8 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "docker start cockpit",
-    "docker": "docker run -d --name cockpit -p 8080:80 agentejo/cockpit",
-    "docker:login": "docker exec -it cockpit /bin/bash",
-    "docker:copyFiles": "docker cp ./cockpitData cockpit:/cockpitData"
+    "docker:init": "docker run -d --name cockpit -p 8080:80 -v ${PWD}/cockpitData:/var/www/html/cockpitData agentejo/cockpit",
+    "docker:login": "docker exec -it cockpit /bin/bash"
   }
 }
