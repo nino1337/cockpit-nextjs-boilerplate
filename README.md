@@ -18,6 +18,10 @@ This repository serves as a boilerplate to kickstart projects, where a content-m
 
 [Next.js](https://nextjs.org/) on the other hand is used to generate our [static web page](https://en.wikipedia.org/wiki/Static_web_page). While exporting our app, it will pre-render every page, we defined, which brings several advantages, like SEO-friendliness and performance boosts.
 
+### Jest and react-testing-library
+
+### emotion css 
+
 ## Getting started
 
 Before starting to set up the workflow, make sure to have **Node** and **docker** installed on your machine and of course to clone this repo.
