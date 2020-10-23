@@ -33,7 +33,7 @@ Before starting to set up the workflow, make sure to have **Node** and **docker*
 
 #### Don't touch the storage folder (unless you know, what you are doing)
 
-- files in the storage folder are in sync with files laying on out docker container (see volumes in docker-compose file)
+- files in the storage folder are in sync with files laying on our docker container (see volumes in docker-compose file)
 - thus, editing or maintaining something in cockpit, automatically changes files on our local machine and vice versa
 - this brings advantages like the import of initial data on start up and to have synchronous data across the team, so make sure to check them into git aswell
 
