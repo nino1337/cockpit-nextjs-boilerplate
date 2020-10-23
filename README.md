@@ -13,7 +13,7 @@ This repository serves as a boilerplate to kickstart projects, where a content-m
 
 ### Next.js
 
-- [Next.js](https://nextjs.org/)
+- [Homepage](https://nextjs.org/)
 - [Github Repository](https://github.com/vercel/next.js/)
 
 [Next.js](https://nextjs.org/) on the other hand is used to generate our [static web page](https://en.wikipedia.org/wiki/Static_web_page). While exporting our app, it will pre-render every page, we defined, which brings several advantages, like SEO-friendliness and performance boosts.
@@ -26,11 +26,10 @@ Before starting to set up the workflow, make sure to have **Node** and **docker*
 
 1. open a terminal of your choice and navigate into the cockpit-cms folder
 2. run `npm run docker`, to download and start the appropriate docker container from agentejo
-3. once the container finished starting, run `npm run docker:copyFiles`
-4. after copying our cockpitData to the docker container, run `npm run docker:login`
-5. on the docker container, run `./cp import --src ./cockpitData` to import our initial data to cockpit
-6. now navigate to http://localhost:8080 and log-in with admin/admin. When everything worked out fine, you should now see 6 added singletons on the right
-7. as a last step - in cockpit - navigate to SETTINGS -> API ACCESS and generate a MASTER API-KEY, that is later used as a token to communicate between the client and cockpit
+3. once the container finished starting, run `npm run docker:login`
+4. on the docker container, run `./cp import --src ./cockpitData` to import our initial data to cockpit
+5. now navigate to http://localhost:8080 and log-in with admin/admin. When everything worked out fine, you should now see 6 added singletons on the right
+6. as a last step - in cockpit - navigate to SETTINGS -> API ACCESS and generate a MASTER API-KEY, that is later used as a token to communicate between the client and cockpit
 
 ![Cockpit CMS Master API Key](/assets/cockpit-master-api-key.png)
 
