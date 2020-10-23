@@ -18,28 +18,45 @@ This repository serves as a boilerplate to kickstart projects, where a content-m
 
 [Next.js](https://nextjs.org/) on the other hand is used to generate our [static web page](https://en.wikipedia.org/wiki/Static_web_page). While exporting our app, it will pre-render every page, we defined, which brings several advantages, like SEO-friendliness and performance boosts.
 
-### Jest and react-testing-library
+### Jest 
 
-### emotion css 
+- [Homepage](https://jestjs.io/)
+- [Github Repository](https://github.com/facebook/jest)
+
+Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
+
+### React-testing-library
+
+- [Homepage](https://testing-library.com/)
+- [Github Repository](https://github.com/testing-library)
+
+React Testing Library builds on top of DOM Testing Library by adding APIs for working with React components.
+
+### Emotion
+
+- [Homepage](https://emotion.sh/docs/introduction)
+- [Github Repository](https://github.com/emotion-js/emotion)
+
+Emotion is a library designed for writing css styles with JavaScript. It provides powerful and predictable style composition in addition to a great developer experience with features such as source maps, labels, and testing utilities. Both string and object styles are supported.
 
 ## Getting started
 
 Before starting to set up the workflow, make sure to have **Node** and **docker** installed on your machine and of course to clone this repo.
 
-1. open a terminal of your choice and navigate into the root of our repository
-2. install all dependencies with `npm i`
-3. initialise the workflow with `npm run init`
-4. once done, run `npm start`
-5. under http://localhost:8080 you should now be able to log-in with admin/admin. On http://localhost:3000 you should see the frontend with some pre-defined pages you can navigate to.
-6. happy coding
+1. Open a terminal of your choice and navigate into the root of our repository.
+2. Install all dependencies with `npm i`.
+3. Initialise the workflow with `npm run init`.
+4. Once done, run `npm start`.
+5. Under http://localhost:8080 you should now be able to log-in with admin/admin. On http://localhost:3000 you should see the frontend with some pre-defined pages you can navigate to.
+6. Happy coding
 
 ## Important Information
 
 #### Don't touch the storage folder (unless you know, what you are doing)
 
-- files in the storage folder are in sync with files laying on our docker container (see volumes in docker-compose file)
-- thus, editing or maintaining something in cockpit, automatically changes files on our local machine and vice versa
-- this brings advantages like the import of initial data on start up and to have synchronous data across the team, so make sure to check them into git aswell
+- Files in the storage folder are in sync with files laying on our docker container (see volumes in docker-compose file)
+- Thus, editing or maintaining something in cockpit, automatically changes files on our local machine and vice versa
+- This brings advantages like importing of initial data on start up and having synchronous data across the team, so make sure to check them into git aswell
 
 #### Master API Key mast match env variable
 
