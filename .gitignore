@@ -29,4 +29,4 @@ yarn-error.log*
 
 # env vars
 .env
-.env.*
+.env.production

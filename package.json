@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "init": "concurrently 'npm start --prefix ./cockpit-cms' 'npm i --prefix ./client'",
     "start": "concurrently 'npm start --prefix ./cockpit-cms' 'npm run dev --prefix ./client'"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "concurrently": "^5.3.0"
   }
 }

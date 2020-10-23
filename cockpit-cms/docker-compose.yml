@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  cockpit:
+    container_name: cockpit
+    image: agentejo/cockpit
+    volumes:
+      - ./storage/schema/collection:/var/www/html/storage/collection/
+      - ./storage/schema/singleton:/var/www/html/storage/singleton/
+      - ./storage/schema/form:/var/www/html/storage/form/
+      - ./storage/data:/var/www/html/storage/data/
+    ports:
+      - 8080:80
