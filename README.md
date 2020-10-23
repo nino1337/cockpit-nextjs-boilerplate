@@ -48,4 +48,4 @@ Before starting to set up the workflow, make sure to have **Node** and **docker*
 - singletons are represented as pages, thus our first step is to add a singleton in cockpit
 - open **[page].js** in our client folder, and add the name of the singleton we just created to the **getStaticPaths Function** as a new page
 
-> Make sure, that the singleton name and the page name must be equal. Furthermore, the page name also represents the url-slug, where the page can be reached at.
+> Make sure, that the singleton name and the page name are equal. Furthermore, the page name also represents the url-slug, hence where the page can be reached at.
