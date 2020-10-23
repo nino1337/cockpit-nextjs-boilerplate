@@ -9,7 +9,7 @@ This repository serves as a boilerplate to kickstart projects, where a content-m
 - [Homepage](https://getcockpit.com)
 - [Github Repository](https://github.com/agentejo/cockpit)
 
-[Cockpit](https://getcockpit.com) hereby serves as our [headless cms](https://en.wikipedia.org/wiki/Headless_content_management_system). Cockpit is php based, thus brings the advantage, that no node is required on our hosting server.
+[Cockpit](https://getcockpit.com) serves as our [headless cms](https://en.wikipedia.org/wiki/Headless_content_management_system). Cockpit is php based, thus brings the advantage, that no node is required on our hosting server.
 
 ### Next.js
 
