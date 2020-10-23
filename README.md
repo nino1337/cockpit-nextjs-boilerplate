@@ -22,48 +22,30 @@ This repository serves as a boilerplate to kickstart projects, where a content-m
 
 Before starting to set up the workflow, make sure to have **Node** and **docker** installed on your machine and of course to clone this repo.
 
-### Set up cockpit cms
+1. open a terminal of your choice and navigate into the root of our repository
+2. run `npm i` to install all dependencies
+3. after all dependencies have been installed, run `npm run init` to initial the workflow
+4. once done, run `npm start`
+5. under http://localhost:8080 you should now be able to log-in with admin/admin. On http://localhost:3000 you should see the frontend with some pre-defined pages you can navigate to.
+6. happy coding
 
-1. open a terminal of your choice and navigate into the cockpit-cms folder
-2. run `npm run docker`, to download and start the appropriate docker container from agentejo
-3. once the container finished starting, run `npm run docker:login`
-4. on the docker container, run `./cp import --src ./cockpitData` to import our initial data to cockpit
-5. now navigate to http://localhost:8080 and log-in with admin/admin. When everything worked out fine, you should now see 6 added singletons on the right
-6. as a last step - in cockpit - navigate to SETTINGS -> API ACCESS and generate a MASTER API-KEY, that is later used as a token to communicate between the client and cockpit
+## Important Information
 
-![Cockpit CMS Master API Key](/assets/cockpit-master-api-key.png)
+#### Don't touch the storage folder (unless you know, what you are doing)
 
-### Set up next.js
+- files in the storage folder are in sync with files laying on out docker container (see volumes in docker-compose file)
+- thus, editing or maintaining something in cockpit, automatically changes files on our local machine and vice versa
+- this brings advantages like the import of initial data on start up and to have synchronous data across the team, so make sure to check them into git aswell
 
-1. after finishing our cockpit configuration, navigate into the client folder
-2. run `npm i` to install all the dependencies needed
-3. when all modules have been installed, create an **.env** file and an **.env.production** file
-4. open the **.env** file and add 2 variables
+#### Master API Key mast match env variable
 
-![env VARIABLES](/assets/env-vars.png)
+- in cockpit under http://localhost:8080/restadmin/index a MASTER API Key is created, that must match the COCKPIT_API_KEY in out .env.local file
+  ![Cockpit CMS Master API Key](/assets/cockpit-master-api-key.png)
+  ![env VARIABLES](/assets/env-vars.png)
 
-> **COCKPIT-API-KEY** yields the MASTER API-KEY, we generated in cockpit.
-> **API-BASE-URL** is the base url, where our docker service runs. Make sure to adjust, if you've started the cockpit container on another port.
+#### Adding new Pages
 
-5. start the workflow with `npm run dev`. Open http://localhost:3000 and navigate between the pages. For now, they just yield a headline, that is maintained in cockpit.
-
-## How it works
-
-...
-
-## How-To's
-
-### Export cockpit files
-
-If you've used the cockpit cms to change data, like adding more singletons, fields, etc., you have to make sure, to keep your lokal cockpitData in sync with the data you changed on the container.
-
-1. `npm run docker:login`
-2. `./cp export --target cockpitData`
-3. `sudo docker cp cockpit:/var/www/html/cockpitData ./cockpitData`
-
-### Adding new pages
-
-1. singletons are represented as pages, thus our first step is to add a singleton in cockpit
-2. open **[page].js** in our client folder, and add the name of the singleton we just created to the **getStaticPaths Function** as a new page
+- singletons are represented as pages, thus our first step is to add a singleton in cockpit
+- open **[page].js** in our client folder, and add the name of the singleton we just created to the **getStaticPaths Function** as a new page
 
 > Make sure, that the singleton name and the page name must be equal. Furthermore, the page name also represents the url-slug, where the page can be reached at.
