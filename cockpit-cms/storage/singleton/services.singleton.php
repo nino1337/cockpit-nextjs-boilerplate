@@ -1,11 +1,11 @@
 <?php
  return array (
-  'name' => 'home',
-  'label' => 'Home',
-  '_id' => 'home',
-  'fields' =>
+  'name' => 'services',
+  'label' => 'Services',
+  '_id' => 'services',
+  'fields' => 
   array (
-    0 =>
+    0 => 
     array (
       'name' => 'headline',
       'label' => 'Headline',
@@ -14,57 +14,57 @@
       'info' => '',
       'group' => '',
       'localize' => false,
-      'options' =>
+      'options' => 
       array (
       ),
       'width' => '1-1',
       'lst' => true,
-      'acl' =>
+      'acl' => 
       array (
       ),
     ),
-    1 =>
+    1 => 
     array (
       'name' => 'metaTitle',
-      'label' => 'Meta Title',
+      'label' => 'Meta-Title',
       'type' => 'text',
       'default' => '',
       'info' => '',
       'group' => 'Meta-Information',
       'localize' => false,
-      'options' =>
+      'options' => 
       array (
       ),
       'width' => '1-1',
       'lst' => true,
-      'acl' =>
+      'acl' => 
       array (
       ),
     ),
-    2 =>
+    2 => 
     array (
       'name' => 'metaDescription',
-      'label' => 'Meta Description',
+      'label' => 'Meta-Description',
       'type' => 'text',
       'default' => '',
       'info' => '',
       'group' => 'Meta-Information',
       'localize' => false,
-      'options' =>
+      'options' => 
       array (
       ),
       'width' => '1-1',
       'lst' => true,
-      'acl' =>
+      'acl' => 
       array (
       ),
     ),
   ),
   'data' => NULL,
-  '_created' => 1603449262,
-  '_modified' => 1603449642,
+  '_created' => 1603711648,
+  '_modified' => 1603711852,
   'description' => '',
-  'acl' =>
+  'acl' => 
   array (
   ),
 );
