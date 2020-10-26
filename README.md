@@ -39,6 +39,14 @@ React Testing Library builds on top of DOM Testing Library by adding APIs for wo
 
 Emotion is a library designed for writing css styles with JavaScript. It provides powerful and predictable style composition in addition to a great developer experience with features such as source maps, labels, and testing utilities. Both string and object styles are supported.
 
+### Eslint, Prettier, Husky
+
+- [Eslint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Husky](https://github.com/typicode/husky#readme)
+
+Using eslint, prettier and husky gives us the ability to equal code standards and style-formations across the team. 
+
 ## Getting started
 
 Before starting to set up the workflow, make sure to have **Node** and **docker** installed on your machine and of course to clone this repo.
