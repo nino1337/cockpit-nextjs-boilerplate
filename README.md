@@ -64,7 +64,7 @@ Before starting to set up the workflow, make sure to have **Node** and **docker*
 
 - Files in the storage folder are in sync with files laying on our docker container (see volumes in docker-compose file)
 - Thus, editing or maintaining something in cockpit, automatically changes files on our local machine and vice versa
-- This brings advantages like importing of initial data on start up and having synchronous data across the team, so make sure to check them into git aswell
+- This brings advantages like importing initial data on start up and having synchronous data across the team, so make sure to check them into git aswell
 
 #### Master API Key must match env variable
 
