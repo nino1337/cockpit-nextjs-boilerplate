@@ -1,8 +1,9 @@
-import Head from "next/head";
+import Head from 'next/head';
+import propTypes from 'prop-types';
 
-import theme from "../styles/theme";
-import { singletons } from "../axios";
-import Button from "../components/button/Button";
+import { singletons } from '../axios';
+import Button from '../components/button/Button';
+import theme from '../styles/theme';
 
 export default function Home({ data }) {
   return (
@@ -21,8 +22,12 @@ export default function Home({ data }) {
   );
 }
 
+Home.propTypes = {
+  data: propTypes.object,
+};
+
 export async function getStaticProps() {
-  const response = await singletons.get("/get/home");
+  const response = await singletons.get('/get/home');
   return {
     props: {
       data: response.data,

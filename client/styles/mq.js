@@ -6,8 +6,7 @@ export const breakpoints = {
 };
 
 const mq = Object.keys(breakpoints).reduce((accumulator, label) => {
-  accumulator[label] = `@media screen and (min-width: ${breakpoints[label] /
-    16}em)`;
+  accumulator[label] = `@media screen and (min-width: ${breakpoints[label] / 16}em)`;
   return accumulator;
 }, {});
 

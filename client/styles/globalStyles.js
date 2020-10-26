@@ -1,10 +1,10 @@
-import { css } from "@emotion/core";
+import { css } from '@emotion/core';
 
+import AvantGardeBook from './fonts/avantgarde/ITCAvantGardeStd-Bk.ttf';
+import AvantGardeBold from './fonts/avantgarde/ITCAvantGardeStd-Bold.ttf';
+import SofiaBold from './fonts/sofia/SofiaProBold.ttf';
 // fonts
-import SofiaLight from "./fonts/sofia/SofiaProLight.ttf";
-import SofiaBold from "./fonts/sofia/SofiaProBold.ttf";
-import AvantGardeBook from "./fonts/avantgarde/ITCAvantGardeStd-Bk.ttf";
-import AvantGardeBold from "./fonts/avantgarde/ITCAvantGardeStd-Bold.ttf";
+import SofiaLight from './fonts/sofia/SofiaProLight.ttf';
 
 const dynamicStyle = (theme) => css`
   @font-face {

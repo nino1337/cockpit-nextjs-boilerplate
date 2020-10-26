@@ -1,9 +1,10 @@
-import Link from "next/link";
-import { ThemeProvider } from "emotion-theming";
-import { Global } from "@emotion/core";
+import { Global } from '@emotion/core';
+import { ThemeProvider } from 'emotion-theming';
+import Link from 'next/link';
+import propTypes from 'prop-types';
 
-import theme from "../styles/theme";
-import globalStyle from "../styles/globalStyles";
+import globalStyle from '../styles/globalStyles';
+import theme from '../styles/theme';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -32,5 +33,10 @@ function MyApp({ Component, pageProps }) {
     </ThemeProvider>
   );
 }
+
+MyApp.propTypes = {
+  Component: propTypes.any,
+  pageProps: propTypes.object,
+};
 
 export default MyApp;
