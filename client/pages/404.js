@@ -1,5 +1,7 @@
-import Head from "next/head";
-import { singletons } from "../axios";
+import Head from 'next/head';
+import propTypes from 'prop-types';
+
+import { singletons } from '../axios';
 
 export default function Error({ data }) {
   return (
@@ -14,8 +16,12 @@ export default function Error({ data }) {
   );
 }
 
+Error.propTypes = {
+  data: propTypes.object,
+};
+
 export async function getStaticProps() {
-  const response = await singletons.get("/get/error");
+  const response = await singletons.get('/get/error');
   return {
     props: {
       data: response.data,

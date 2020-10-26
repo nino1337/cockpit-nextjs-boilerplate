@@ -1,6 +1,7 @@
-import Head from "next/head";
+import Head from 'next/head';
+import propTypes from 'prop-types';
 
-import { singletons } from "../axios";
+import { singletons } from '../axios';
 
 export default function Page({ data }) {
   return (
@@ -16,14 +17,18 @@ export default function Page({ data }) {
   );
 }
 
+Page.propTypes = {
+  data: propTypes.object,
+};
+
 // params must equal singleton names created in the cockpit cms
 export async function getStaticPaths() {
   return {
     paths: [
-      { params: { page: "about" } },
-      { params: { page: "services" } },
-      { params: { page: "impressum" } },
-      { params: { page: "datenschutz" } },
+      { params: { page: 'about' } },
+      { params: { page: 'services' } },
+      { params: { page: 'impressum' } },
+      { params: { page: 'datenschutz' } },
     ],
     fallback: false,
   };

@@ -10,24 +10,44 @@
     "test:watch": "yarn test -- --watch"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.27",
+    "@emotion/styled": "^10.0.27",
     "axios": "^0.20.0",
     "dotenv": "^8.2.0",
     "dotenv-cli": "^4.0.0",
+    "emotion-theming": "^10.0.27",
     "next": "9.5.5",
     "next-images": "^1.6.0",
     "react": "17.0.0",
-    "react-dom": "17.0.0",
-    "@emotion/core": "^10.0.27",
-    "@emotion/styled": "^10.0.27",
-    "emotion-theming": "^10.0.27"
+    "react-dom": "17.0.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.1.1",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^10.0.0",
+    "eslint": "^7.12.0",
+    "eslint-config-prettier": "^6.14.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-simple-import-sort": "^5.0.3",
+    "husky": "^4.3.0",
     "jest": "^25.0.0",
     "jest-axe": "^3.3.0",
     "jest-emotion": "^10.0.27",
-    "jest-transform-stub": "^2.0.0"
+    "jest-transform-stub": "^2.0.0",
+    "lint-staged": "^10.4.2",
+    "prettier": "^2.1.2"
+  },
+  "browserslist": "> 0.25%, not dead",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "./node_modules/.bin/eslint --fix",
+      "git add"
+    ]
   }
 }

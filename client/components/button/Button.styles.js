@@ -1,11 +1,10 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
-import mq from "../../styles/mq";
+import mq from '../../styles/mq';
 
 export const Button = styled.button`
   appearance: none;
-  background-color: ${({ backgroundColor, theme }) =>
-    backgroundColor || theme.colors.white};
+  background-color: ${({ bgColor, theme }) => bgColor || theme.colors.white};
   border: none;
   border-radius: 3px;
   color: ${({ color, theme }) => color || theme.colors.text};
@@ -19,8 +18,7 @@ export const Button = styled.button`
 
   ${mq.md} {
     &:hover {
-      color: ${({ backgroundColor, theme }) =>
-        backgroundColor || theme.colors.white};
+      color: ${({ bgColor, theme }) => bgColor || theme.colors.white};
       background-color: ${({ color, theme }) => color || theme.colors.text};
     }
   }

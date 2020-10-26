@@ -1,4 +1,4 @@
-const withImages = require("next-images");
+const withImages = require('next-images');
 
 module.exports = withImages({
   inlineImageLimit: 16384,
@@ -12,7 +12,7 @@ module.exports = withImages({
     config.module.rules.push({
       test: /\.(eot|ttf|woff|woff2)$/,
       use: {
-        loader: "url-loader",
+        loader: 'url-loader',
         options: {
           limit: 100000,
         },
