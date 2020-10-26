@@ -18,7 +18,7 @@ This repository serves as a boilerplate to kickstart projects, where a content-m
 
 [Next.js](https://nextjs.org/) on the other hand is used to generate our [static web page](https://en.wikipedia.org/wiki/Static_web_page). While exporting our app, it will pre-render every page, we defined, which brings several advantages, like SEO-friendliness and performance boosts.
 
-### Jest 
+### Jest
 
 - [Homepage](https://jestjs.io/)
 - [Github Repository](https://github.com/facebook/jest)
@@ -45,7 +45,7 @@ Emotion is a library designed for writing css styles with JavaScript. It provide
 - [Prettier](https://prettier.io/)
 - [Husky](https://github.com/typicode/husky#readme)
 
-Using eslint, prettier and husky gives us the ability to equal code standards and style-formations across the team. 
+Using eslint, prettier and husky gives us the ability to equal code standards and style-formations across the team.
 
 ## Getting started
 
@@ -69,8 +69,8 @@ Before starting to set up the workflow, make sure to have **Node** and **docker*
 #### Master API Key must match env variable
 
 - in cockpit under http://localhost:8080/restadmin/index a MASTER API Key is created, that must match the COCKPIT_API_KEY in our .env.local file
-  ![Cockpit CMS Master API Key](/assets/cockpit-master-api-key.png)
-  ![env VARIABLES](/assets/env-vars.png)
+  ![Cockpit CMS Master API Key](/docs/assets/cockpit-master-api-key.png)
+  ![env VARIABLES](/docs/assets/env-vars.png)
 
 #### Adding new Pages
 
