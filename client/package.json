@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "dotenv next dev",
-    "build": "dotenv -e .env.production next build",
+    "build": "dotenv -e .env.production next build && next export",
     "start": "next start",
     "test": "jest --coverage",
     "test:watch": "yarn test -- --watch"
