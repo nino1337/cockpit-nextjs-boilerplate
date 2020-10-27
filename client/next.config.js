@@ -6,8 +6,7 @@ module.exports = withImages({
     COCKPIT_API_KEY: process.env.COCKPIT_API_KEY,
     API_BASE_URL: process.env.API_BASE_URL,
   },
-  tralingSlash: true,
-  exportTrailingSlash: true,
+  trailingSlash: true,
   webpack: (config) => {
     config.module.rules.push({
       test: /\.(eot|ttf|woff|woff2)$/,
@@ -19,5 +18,9 @@ module.exports = withImages({
       },
     });
     return config;
+  },
+  i18n: {
+    locales: ['en', 'de'],
+    defaultLocale: 'de',
   },
 });

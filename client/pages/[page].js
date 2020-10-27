@@ -23,10 +23,14 @@ export default function Page() {
 export async function getStaticPaths() {
   return {
     paths: [
-      { params: { page: 'about' } },
-      { params: { page: 'services' } },
-      { params: { page: 'impressum' } },
-      { params: { page: 'datenschutz' } },
+      { params: { page: 'about' }, locale: 'en' },
+      { params: { page: 'about' }, locale: 'de' },
+      { params: { page: 'services' }, locale: 'en' },
+      { params: { page: 'services' }, locale: 'de' },
+      { params: { page: 'impressum' }, locale: 'en' },
+      { params: { page: 'impressum' }, locale: 'de' },
+      { params: { page: 'datenschutz' }, locale: 'en' },
+      { params: { page: 'datenschutz' }, locale: 'de' },
     ],
     fallback: false,
   };
