@@ -1,0 +1,11 @@
+# Cockpit settings
+<?php
+
+return [
+    # define the languages you want to manage
+    'languages' => [
+        'default' => 'German',       #setting a default language is optional
+        'fr' => 'French',
+        'en' => 'English'
+    ],
+];
