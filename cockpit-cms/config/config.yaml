@@ -1,11 +1,3 @@
 languages:
-    default: 'German',
-    fr: 'French',
-    en: 'Englisch',
-lokalize:
-    importkeys: false,
-    publicAccess: false,
-    delimiter: ";",
-    translationService:
-        provider: "Google"
-        apikey: "AIzaxxx"
+  default: Deutsch
+  en: Englisch

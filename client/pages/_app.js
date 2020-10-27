@@ -1,35 +1,33 @@
 import { Global } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 import propTypes from 'prop-types';
+import { useEffect, useState } from 'react';
+import React from 'react';
 
+import LocalizationContext from '../localization/context';
+import extractDataFromLocalization from '../localization/extractDataFromLocalization';
 import globalStyle from '../styles/globalStyles';
 import theme from '../styles/theme';
-
 function MyApp({ Component, pageProps }) {
+  const [localizedData, setLocalizedData] = useState(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    const navigatorLanguage = navigator.language || navigator.userLanguage;
+
+    setLocalizedData(extractDataFromLocalization(navigatorLanguage, pageProps));
+    // keep app state in sync with current page
+  }, [router.asPath]);
+
   return (
     <ThemeProvider theme={theme}>
       <Global styles={globalStyle} />
-      <ul>
-        <li>
-          <Link href="/">Startseite</Link>
-        </li>
-        <li>
-          <Link href="/services">Services</Link>
-        </li>
-        <li>
-          <Link href="/about">Über uns</Link>
-        </li>
-        <li>
-          <Link href="/impressum">Impressum</Link>
-        </li>
-
-        <li>
-          <Link href="/datenschutz">Datenschutz</Link>
-        </li>
-      </ul>
-
-      <Component {...pageProps} />
+      {localizedData && (
+        <LocalizationContext.Provider value={localizedData}>
+          <Component {...pageProps} />
+        </LocalizationContext.Provider>
+      )}
     </ThemeProvider>
   );
 }

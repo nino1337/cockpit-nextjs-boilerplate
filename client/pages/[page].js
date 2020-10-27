@@ -1,25 +1,23 @@
-import Head from 'next/head';
-import propTypes from 'prop-types';
+import { collections, singletons } from '../axios';
+import Layout from '../components/layout/Layout';
 
-import { singletons } from '../axios';
-
-export default function Page({ data }) {
-  return (
-    <div>
-      <Head>
-        <title>{data.metaTitle}</title>
-        <meta name="description" content={data.metaDescription} />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <h1>{data.headline}</h1>
-    </div>
-  );
+export default function Page() {
+  return <Layout />;
 }
 
-Page.propTypes = {
-  data: propTypes.object,
-};
+/**
+ * documentation: https://nextjs.org/docs/basic-features/data-fetching#getstaticpaths-static-generation
+ * getStaticPaths gets executed when `next export` is executed
+ * files in this directory are placed within the [page]-directory
+ * the [page]-directory gets named, when we export our app
+ * e.g. page: 'services', the output after exporting the app would be:
+ * /out
+ *  /services
+ *   /index.html
+ * This means, that next has pre rendered our page, which brings advantages like SEO-friendliness etc.
+ * The tradeoff here is, that we need to define the pages in here. So we need to know priorly, which pages will exist in our App.
+ * We could also fetch all singletons from the backend and handle routing purely on the client side, but this would also keep us from pre rendering our pages.
+ */
 
 // params must equal singleton names created in the cockpit cms
 export async function getStaticPaths() {
@@ -34,11 +32,16 @@ export async function getStaticPaths() {
   };
 }
 
+/**
+ * documentation: https://nextjs.org/docs/basic-features/data-fetching#getstaticprops-static-generation
+ * is used to pass parameters to our page components, enabling nextjs to prerender the webpage with content on it
+ */
 export async function getStaticProps(context) {
-  const response = await singletons.get(`/get/${context.params.page}`);
+  const pages = await singletons.get(`/get/${context.params.page}`);
+  const mainNavigation = await collections.get('/get/mainNavigation');
+  const pageProps = Object.assign(pages.data, mainNavigation.data[0]);
+
   return {
-    props: {
-      data: response.data,
-    },
+    props: pageProps,
   };
 }

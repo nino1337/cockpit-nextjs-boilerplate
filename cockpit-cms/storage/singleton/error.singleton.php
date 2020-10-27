@@ -27,10 +27,10 @@
   ),
   'data' => NULL,
   '_created' => 1603711585,
-  '_modified' => 1603790481,
+  '_modified' => 1603793728,
   'description' => '',
   'acl' => 
   array (
   ),
-  'color' => '#D8334A',
+  'color' => '',
 );
