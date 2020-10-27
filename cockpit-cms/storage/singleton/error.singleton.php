@@ -13,7 +13,7 @@
       'default' => '',
       'info' => '',
       'group' => '',
-      'localize' => false,
+      'localize' => true,
       'options' => 
       array (
       ),
@@ -22,13 +22,15 @@
       'acl' => 
       array (
       ),
+      'required' => true,
     ),
   ),
   'data' => NULL,
   '_created' => 1603711585,
-  '_modified' => 1603711585,
+  '_modified' => 1603793728,
   'description' => '',
   'acl' => 
   array (
   ),
+  'color' => '',
 );

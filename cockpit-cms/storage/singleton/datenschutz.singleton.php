@@ -13,7 +13,7 @@
       'default' => '',
       'info' => '',
       'group' => '',
-      'localize' => false,
+      'localize' => true,
       'options' => 
       array (
       ),
@@ -22,6 +22,7 @@
       'acl' => 
       array (
       ),
+      'required' => true,
     ),
     1 => 
     array (
@@ -31,7 +32,7 @@
       'default' => '',
       'info' => '',
       'group' => 'Meta-Information',
-      'localize' => false,
+      'localize' => true,
       'options' => 
       array (
       ),
@@ -40,6 +41,7 @@
       'acl' => 
       array (
       ),
+      'required' => true,
     ),
     2 => 
     array (
@@ -49,7 +51,7 @@
       'default' => '',
       'info' => '',
       'group' => 'Meta-Information',
-      'localize' => false,
+      'localize' => true,
       'options' => 
       array (
       ),
@@ -58,11 +60,12 @@
       'acl' => 
       array (
       ),
+      'required' => true,
     ),
   ),
   'data' => NULL,
   '_created' => 1603711567,
-  '_modified' => 1603711789,
+  '_modified' => 1603790196,
   'description' => '',
   'acl' => 
   array (

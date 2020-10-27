@@ -60,9 +60,9 @@ Before starting to set up the workflow, make sure to have **Node** and **docker*
 
 ## Important Information
 
-#### Don't touch the storage folder (unless you know, what you are doing)
+#### Don't touch folders in the cockpit-cms directory (unless you know, what you are doing)
 
-- Files in the storage folder are in sync with files laying on our docker container (see volumes in docker-compose file)
+- Files in these folders are in sync with files laying on our docker container (see volumes in docker-compose file)
 - Thus, editing or maintaining something in cockpit, automatically changes files on our local machine and vice versa
 - This brings advantages like importing initial data on start up and having synchronous data across the team, so make sure to check them into git aswell
 

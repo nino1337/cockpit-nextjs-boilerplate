@@ -1,36 +1,24 @@
-import Head from 'next/head';
-import propTypes from 'prop-types';
-
-import { singletons } from '../axios';
+import { collections, singletons } from '../axios';
 import Button from '../components/button/Button';
+import Layout from '../components/layout/Layout';
 import theme from '../styles/theme';
 
-export default function Home({ data }) {
+export default function Home() {
   return (
-    <div>
-      <Head>
-        <title>{data.metaTitle}</title>
-        <meta name="description" content={data.metaDescription} />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <h1>{data.headline}</h1>
-      <Button backgroundColor={theme.colors.grey} color={theme.colors.white}>
+    <Layout>
+      <Button bgColor={theme.colors.grey} color={theme.colors.white}>
         Button
       </Button>
-    </div>
+    </Layout>
   );
 }
 
-Home.propTypes = {
-  data: propTypes.object,
-};
-
 export async function getStaticProps() {
-  const response = await singletons.get('/get/home');
+  const pages = await singletons.get('/get/home');
+  const mainNavigation = await collections.get('/get/mainNavigation');
+  const pageProps = Object.assign(pages.data, mainNavigation.data[0]);
+
   return {
-    props: {
-      data: response.data,
-    },
+    props: pageProps,
   };
 }

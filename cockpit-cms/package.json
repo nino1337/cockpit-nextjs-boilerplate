@@ -3,6 +3,7 @@
   "version": "0.11.2",
   "license": "MIT",
   "scripts": {
-    "start": "docker-compose up -d"
+    "start": "docker-compose up -d",
+    "docker:login": "docker exec -it cockpit /bin/bash"
   }
 }

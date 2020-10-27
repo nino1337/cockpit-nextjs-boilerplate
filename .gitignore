@@ -30,3 +30,9 @@ yarn-error.log*
 # env vars
 .env
 .env.production
+
+# cockpit cms
+cockpit-cms/storage/tmp/*
+
+!.gitkeep
+
