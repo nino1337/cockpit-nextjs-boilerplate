@@ -1,10 +1,10 @@
-# Cockpit CMS + Next.js Boilerplate
+# Cockpit + Next.js Boilerplate
 
 This repository serves as a boilerplate to kickstart projects, where a content-management-system is needed (e.g. customer projects), but where you also don't want to miss newest frontend-technologies, react and next, to name them.
 
 ## Technologies used
 
-### Cockpit CMS
+### Cockpit
 
 - [Homepage](https://getcockpit.com)
 - [Github Repository](https://github.com/agentejo/cockpit)
@@ -60,7 +60,7 @@ Before starting to set up the workflow, make sure to have **Node** and **docker*
 
 ## Important Information
 
-#### Don't touch folders in the cockpit-cms directory (unless you know, what you are doing)
+#### Don't touch folders in the cockpit directory (unless you know, what you are doing)
 
 - Files in these folders are in sync with files laying on our docker container (see volumes in docker-compose file)
 - Thus, editing or maintaining something in cockpit, automatically changes files on our local machine and vice versa
@@ -75,6 +75,6 @@ Before starting to set up the workflow, make sure to have **Node** and **docker*
 #### Adding new Pages
 
 - singletons are represented as pages, thus our first step is to add a singleton in cockpit
-- open **[page].js** in our client folder, and add the name of the singleton we just created to the **getStaticPaths Function** as a new page
+- open **[page].js** in our next-app folder, and add the name of the singleton we just created to the **getStaticPaths Function** as a new page
 
 > Make sure, that the singleton name and the page name are equal. Furthermore, the page name also represents the url-slug, hence where the page can be reached at.
