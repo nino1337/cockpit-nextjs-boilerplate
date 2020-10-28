@@ -32,7 +32,7 @@ yarn-error.log*
 .env.production
 
 # cockpit cms
-cockpit-cms/storage/tmp/*
+cockpit/storage/tmp/*
 
 !.gitkeep
 
