@@ -1,4 +1,4 @@
-# Cockpit CMS + Next.js Boilerplate
+# Cockpit + Next.js Boilerplate
 
 This repository serves as a boilerplate to kickstart projects, where a content-management-system is needed (e.g. customer projects), but where you also don't want to miss newest frontend-technologies, react and next, to name them.
 
