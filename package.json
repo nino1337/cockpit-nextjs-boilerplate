@@ -1,10 +1,10 @@
 {
-  "name": "cockpit-cms-react-boilerplate",
+  "name": "cockpit-next-boilerplate",
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "init": "concurrently 'npm start --prefix ./cockpit-cms' 'npm install --prefix ./client'",
-    "start": "concurrently 'npm start --prefix ./cockpit-cms' 'npm run dev --prefix ./client'"
+    "init": "concurrently 'npm start --prefix ./cockpit' 'npm install --prefix ./next-app'",
+    "start": "concurrently 'npm start --prefix ./cockpit' 'npm run dev --prefix ./next-app'"
   },
   "author": "",
   "license": "ISC",
