@@ -1,14 +1,14 @@
 <?php
  return array (
-  'name' => 'impressum',
-  'label' => 'Impressum',
-  '_id' => 'impressum',
+  'name' => 'siteSettings',
+  'label' => 'Seiten-Einstellungen',
+  '_id' => 'siteSettings',
   'fields' => 
   array (
     0 => 
     array (
-      'name' => 'headline',
-      'label' => 'Headline',
+      'name' => 'name',
+      'label' => 'Webseiten-Name',
       'type' => 'text',
       'default' => '',
       'info' => '',
@@ -26,12 +26,12 @@
     ),
     1 => 
     array (
-      'name' => 'metaTitle',
-      'label' => 'Meta-Title',
+      'name' => 'description',
+      'label' => 'Beschreibung der Webseite',
       'type' => 'text',
       'default' => '',
       'info' => '',
-      'group' => 'Meta-Information',
+      'group' => '',
       'localize' => true,
       'options' => 
       array (
@@ -45,12 +45,12 @@
     ),
     2 => 
     array (
-      'name' => 'metaDescription',
-      'label' => 'Meta-Description',
-      'type' => 'text',
+      'name' => 'footerText',
+      'label' => 'Footer-Inhalt',
+      'type' => 'textarea',
       'default' => '',
       'info' => '',
-      'group' => 'Meta-Information',
+      'group' => '',
       'localize' => true,
       'options' => 
       array (
@@ -64,10 +64,11 @@
     ),
   ),
   'data' => NULL,
-  '_created' => 1603711617,
-  '_modified' => 1603790219,
+  '_created' => 1603984709,
+  '_modified' => 1603985013,
   'description' => '',
   'acl' => 
   array (
   ),
+  'color' => '#4FC1E9',
 );

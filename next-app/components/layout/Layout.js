@@ -8,15 +8,17 @@ import Navigation from '../navigation/Navigation';
 const Layout = ({ children }) => {
   const localizedData = useContext(LocalizationContext);
 
+  console.log(localizedData);
+
   return (
     <>
       <Head>
-        <title>{localizedData.metaTitle}</title>
-        <meta name="description" content={localizedData.metaDescription} />
+        <title>{localizedData.currentPage.metaTitle}</title>
+        <meta name="description" content={localizedData.currentPage.metaDescription} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation />
-      <h1>{localizedData.headline}</h1>
+      <h1>{localizedData.currentPage.title}</h1>
       {children}
     </>
   );

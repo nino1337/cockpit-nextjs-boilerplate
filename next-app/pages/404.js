@@ -1,17 +1,17 @@
 import Head from 'next/head';
 import propTypes from 'prop-types';
 
-import { singletons } from '../axios';
+import { collections } from '../axios';
 
 export default function Error({ data }) {
   return (
     <div>
       <Head>
-        <title>{data.headline}</title>
+        <title>{data.currentPage.title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>{data.headline}</h1>
+      <h1>{data.currentPage.title}</h1>
     </div>
   );
 }
@@ -21,10 +21,10 @@ Error.propTypes = {
 };
 
 export async function getStaticProps() {
-  const response = await singletons.get('/get/error');
+  const availablePages = await collections.get('/get/pages');
+  const pagesData = availablePages.data.find((page) => page.title === '404');
+
   return {
-    props: {
-      data: response.data,
-    },
+    props: { currentPage: pagesData, pages: availablePages.data },
   };
 }

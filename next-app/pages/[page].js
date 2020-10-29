@@ -1,4 +1,6 @@
-import { collections, singletons } from '../axios';
+import urlSlug from 'url-slug';
+
+import { collections } from '../axios';
 import Layout from '../components/layout/Layout';
 
 export default function Page() {
@@ -17,11 +19,11 @@ export default function Page() {
  * This means, that next has pre rendered our page, which brings advantages like SEO-friendliness etc.
  */
 export async function getStaticPaths() {
-  const availablePages = await singletons.get('/listSingletons');
-  const paths = availablePages.data.reduce((paths, currentPage) => {
-    return [...paths, { params: { page: currentPage } }];
-  }, []);
+  const availablePages = await collections.get('/get/pages');
 
+  const paths = availablePages.data.reduce((paths, currentPage) => {
+    return [...paths, { params: { page: currentPage.url || urlSlug(currentPage.title) } }];
+  }, []);
   return {
     paths,
     fallback: false,
@@ -33,11 +35,12 @@ export async function getStaticPaths() {
  * is used to pass parameters to our page components, enabling nextjs to prerender the webpage with content on it
  */
 export async function getStaticProps(context) {
-  const pagesData = await singletons.get(`/get/${context.params.page}`);
-  const mainNavigation = await collections.get('/get/mainNavigation');
-  const pageProps = Object.assign(pagesData.data, mainNavigation.data[0]);
+  const availablePages = await collections.get('/get/pages');
+  const pagesData = availablePages.data.find(
+    (page) => urlSlug(page.title) === context.params.page || page.url === context.params.page
+  );
 
   return {
-    props: pageProps,
+    props: { currentPage: pagesData, pages: availablePages.data },
   };
 }
