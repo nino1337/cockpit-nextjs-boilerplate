@@ -8,8 +8,6 @@ import Navigation from '../navigation/Navigation';
 const Layout = ({ children }) => {
   const localizedData = useContext(LocalizationContext);
 
-  console.log(localizedData);
-
   return (
     <>
       <Head>
