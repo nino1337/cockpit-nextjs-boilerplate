@@ -71,10 +71,3 @@ Before starting to set up the workflow, make sure to have **Node** and **docker*
 - in cockpit under http://localhost:8080/restadmin/index a MASTER API Key is created, that must match the COCKPIT_API_KEY in our .env.local file
   ![Cockpit CMS Master API Key](/docs/assets/cockpit-master-api-key.png)
   ![env VARIABLES](/docs/assets/env-vars.png)
-
-#### Adding new Pages
-
-- singletons are represented as pages, thus our first step is to add a singleton in cockpit
-- open **[page].js** in our next-app folder, and add the name of the singleton we just created to the **getStaticPaths Function** as a new page
-
-> Make sure, that the singleton name and the page name are equal. Furthermore, the page name also represents the url-slug, hence where the page can be reached at.
