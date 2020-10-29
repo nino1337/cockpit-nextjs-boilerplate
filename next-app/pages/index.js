@@ -1,4 +1,4 @@
-import { collections, singletons } from '../axios';
+import { collections } from '../axios';
 import Button from '../components/button/Button';
 import Layout from '../components/layout/Layout';
 import theme from '../styles/theme';
@@ -14,11 +14,10 @@ export default function Home() {
 }
 
 export async function getStaticProps() {
-  const pages = await singletons.get('/get/home');
-  const mainNavigation = await collections.get('/get/mainNavigation');
-  const pageProps = Object.assign(pages.data, mainNavigation.data[0]);
+  const availablePages = await collections.get('/get/pages');
+  const pagesData = availablePages.data.find((page) => page.title === 'Startseite');
 
   return {
-    props: pageProps,
+    props: { currentPage: pagesData, pages: availablePages.data },
   };
 }
