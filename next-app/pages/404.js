@@ -1,24 +1,9 @@
-import Head from 'next/head';
-import propTypes from 'prop-types';
-
 import { collections } from '../axios';
+import Layout from '../components/layout/Layout';
 
-export default function Error({ data }) {
-  return (
-    <div>
-      <Head>
-        <title>{data.currentPage.title}</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <h1>{data.currentPage.title}</h1>
-    </div>
-  );
+export default function Error() {
+  return <Layout />;
 }
-
-Error.propTypes = {
-  data: propTypes.object,
-};
 
 export async function getStaticProps() {
   const availablePages = await collections.get('/get/pages');
