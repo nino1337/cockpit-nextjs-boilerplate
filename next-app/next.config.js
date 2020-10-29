@@ -7,6 +7,7 @@ module.exports = withImages({
     API_BASE_URL: process.env.API_BASE_URL,
   },
   tralingSlash: true,
+  exportTrailingSlash: true,
   webpack: (config) => {
     config.module.rules.push({
       test: /\.(eot|ttf|woff|woff2)$/,

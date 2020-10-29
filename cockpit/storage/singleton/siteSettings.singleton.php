@@ -45,6 +45,52 @@
     ),
     2 => 
     array (
+      'name' => 'homepage',
+      'label' => 'Startseite',
+      'type' => 'collectionlink',
+      'default' => '',
+      'info' => '',
+      'group' => '',
+      'localize' => false,
+      'options' => 
+      array (
+        'link' => 'pages',
+        'display' => 'Startseite',
+        'multiple' => false,
+        'limit' => false,
+      ),
+      'width' => '1-2',
+      'lst' => true,
+      'acl' => 
+      array (
+      ),
+      'required' => true,
+    ),
+    3 => 
+    array (
+      'name' => '404',
+      'label' => '',
+      'type' => 'collectionlink',
+      'default' => '',
+      'info' => '',
+      'group' => '',
+      'localize' => false,
+      'options' => 
+      array (
+        'link' => 'pages',
+        'display' => '404 Seite',
+        'multiple' => false,
+        'limit' => false,
+      ),
+      'width' => '1-2',
+      'lst' => true,
+      'acl' => 
+      array (
+      ),
+      'required' => true,
+    ),
+    4 => 
+    array (
       'name' => 'footerText',
       'label' => 'Footer-Inhalt',
       'type' => 'textarea',
@@ -65,7 +111,7 @@
   ),
   'data' => NULL,
   '_created' => 1603984709,
-  '_modified' => 1603985013,
+  '_modified' => 1604003002,
   'description' => '',
   'acl' => 
   array (

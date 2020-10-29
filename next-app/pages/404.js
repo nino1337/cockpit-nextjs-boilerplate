@@ -1,4 +1,4 @@
-import { collections } from '../axios';
+import { collections, singletons } from '../axios';
 import Layout from '../components/layout/Layout';
 
 export default function Error() {
@@ -7,7 +7,8 @@ export default function Error() {
 
 export async function getStaticProps() {
   const availablePages = await collections.get('/get/pages');
-  const pagesData = availablePages.data.find((page) => page.title === '404');
+  const siteSettings = await singletons.get('/get/siteSettings');
+  const pagesData = availablePages.data.find((page) => page._id === siteSettings.data[404]._id);
 
   return {
     props: { currentPage: pagesData, pages: availablePages.data },

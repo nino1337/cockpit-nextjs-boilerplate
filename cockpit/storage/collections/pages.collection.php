@@ -54,6 +54,7 @@
       'localize' => true,
       'options' => 
       array (
+        'slug' => true,
       ),
       'width' => '1-2',
       'lst' => true,
@@ -79,6 +80,7 @@
       'acl' => 
       array (
       ),
+      'required' => false,
     ),
     4 => 
     array (
@@ -104,7 +106,7 @@
       'label' => 'Menü',
       'type' => 'set',
       'default' => '',
-      'info' => '',
+      'info' => 'In welchem Menü soll die Seite angezeigt werden',
       'group' => '',
       'localize' => false,
       'options' => 
@@ -174,7 +176,7 @@
   'sortable' => true,
   'in_menu' => false,
   '_created' => 1603983467,
-  '_modified' => 1603986320,
+  '_modified' => 1604003112,
   'color' => '#FFCE54',
   'acl' => 
   array (

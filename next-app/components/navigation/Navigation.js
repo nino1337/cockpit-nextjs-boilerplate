@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { useContext } from 'react';
-import urlSlug from 'url-slug';
 
 import LocalizationContext from '../../localization/context';
 
@@ -13,7 +12,7 @@ const Navigation = () => {
         if (!page.published || !page.menu.header) return null;
         return (
           <li key={page.title}>
-            <Link href={page.url || urlSlug(page.title)}>{page.title}</Link>
+            <Link href={page.url || page.title_slug}>{page.title}</Link>
           </li>
         );
       })}

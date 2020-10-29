@@ -1,6 +1,4 @@
-import urlSlug from 'url-slug';
-
-import { collections } from '../axios';
+import { collections, singletons } from '../axios';
 import Layout from '../components/layout/Layout';
 
 export default function Page() {
@@ -20,9 +18,16 @@ export default function Page() {
  */
 export async function getStaticPaths() {
   const availablePages = await collections.get('/get/pages');
+  const siteSettings = await singletons.get('/get/siteSettings');
 
   const paths = availablePages.data.reduce((paths, currentPage) => {
-    return [...paths, { params: { page: currentPage.url || urlSlug(currentPage.title) } }];
+    if (
+      currentPage._id === siteSettings.data.homepage._id ||
+      currentPage._id === siteSettings.data[404]._id
+    )
+      return paths;
+
+    return [...paths, { params: { page: currentPage.url || currentPage.title_slug } }];
   }, []);
   return {
     paths,
@@ -37,7 +42,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const availablePages = await collections.get('/get/pages');
   const pagesData = availablePages.data.find(
-    (page) => urlSlug(page.title) === context.params.page || page.url === context.params.page
+    (page) => page.url === context.params.page || page.title_slug === context.params.page
   );
 
   return {

@@ -104,7 +104,7 @@
       'label' => 'Menü',
       'type' => 'set',
       'default' => '',
-      'info' => '',
+      'info' => 'In welchem Menü soll die Seite angezeigt werden',
       'group' => '',
       'localize' => false,
       'options' => 
@@ -174,7 +174,7 @@
   'sortable' => true,
   'in_menu' => false,
   '_created' => 1603984194,
-  '_modified' => 1603986335,
+  '_modified' => 1604003158,
   'color' => '#A0D468',
   'acl' => 
   array (
