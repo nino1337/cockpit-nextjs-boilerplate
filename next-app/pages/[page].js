@@ -15,19 +15,15 @@ export default function Page() {
  *  /services
  *   /index.html
  * This means, that next has pre rendered our page, which brings advantages like SEO-friendliness etc.
- * The tradeoff here is, that we need to define the pages in here. So we need to know priorly, which pages will exist in our App.
- * We could also fetch all singletons from the backend and handle routing purely on the client side, but this would also keep us from pre rendering our pages.
  */
-
-// params must equal singleton names created in the cockpit cms
 export async function getStaticPaths() {
+  const availablePages = await singletons.get('/listSingletons');
+  const paths = availablePages.data.reduce((paths, currentPage) => {
+    return [...paths, { params: { page: currentPage } }];
+  }, []);
+
   return {
-    paths: [
-      { params: { page: 'about' } },
-      { params: { page: 'services' } },
-      { params: { page: 'impressum' } },
-      { params: { page: 'datenschutz' } },
-    ],
+    paths,
     fallback: false,
   };
 }
@@ -37,9 +33,9 @@ export async function getStaticPaths() {
  * is used to pass parameters to our page components, enabling nextjs to prerender the webpage with content on it
  */
 export async function getStaticProps(context) {
-  const pages = await singletons.get(`/get/${context.params.page}`);
+  const pagesData = await singletons.get(`/get/${context.params.page}`);
   const mainNavigation = await collections.get('/get/mainNavigation');
-  const pageProps = Object.assign(pages.data, mainNavigation.data[0]);
+  const pageProps = Object.assign(pagesData.data, mainNavigation.data[0]);
 
   return {
     props: pageProps,
