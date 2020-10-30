@@ -1,0 +1,22 @@
+{
+    "gallery": {
+        "label": "Gallery",
+        "dialog": "normal",
+        "children": false,
+        "fields": [
+            {
+                "name": "test",
+                "label": "Test",
+                "type": "text",
+                "default": "",
+                "info": "",
+                "group": "",
+                "localize": false,
+                "options": [],
+                "width": "1-1",
+                "lst": true,
+                "acl": []
+            }
+        ]
+    }
+}
