@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import React from 'react';
 
 import LocalizationContext from '../localization/context';
-import extractDataFromLocalization from '../localization/extractDataFromLocalization';
+import getTranslationsFromPage from '../localization/getTranslationsFromPage';
 import globalStyle from '../styles/globalStyles';
 import theme from '../styles/theme';
 function MyApp({ Component, pageProps }) {
@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     const navigatorLanguage = navigator.language || navigator.userLanguage;
 
-    setLocalizedData(extractDataFromLocalization(navigatorLanguage, pageProps));
+    setLocalizedData(getTranslationsFromPage(navigatorLanguage, pageProps));
     // keep app state in sync with current page
   }, [router.asPath]);
 

@@ -157,7 +157,7 @@
     array (
       'name' => 'components',
       'label' => 'Elemente',
-      'type' => 'object',
+      'type' => 'layout',
       'default' => '',
       'info' => '',
       'group' => '',
@@ -176,7 +176,7 @@
   'sortable' => true,
   'in_menu' => false,
   '_created' => 1603983467,
-  '_modified' => 1604003112,
+  '_modified' => 1604004916,
   'color' => '#FFCE54',
   'acl' => 
   array (

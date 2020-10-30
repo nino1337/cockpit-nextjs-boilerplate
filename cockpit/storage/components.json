@@ -1,0 +1,50 @@
+{
+    "button": {
+        "label": "Button",
+        "dialog": "normal",
+        "children": false,
+        "fields": [
+            {
+                "name": "text",
+                "label": "Text",
+                "type": "text",
+                "default": "",
+                "info": "",
+                "group": "",
+                "localize": false,
+                "options": [],
+                "width": "1-1",
+                "lst": true,
+                "acl": [],
+                "required": true
+            },
+            {
+                "name": "variant",
+                "label": "Variante",
+                "type": "text",
+                "default": "",
+                "info": "Zur Verf\u00fcgung stehen \"ghost\", \"primary\", \"secondary\"",
+                "group": "",
+                "localize": false,
+                "options": [],
+                "width": "1-1",
+                "lst": true,
+                "acl": []
+            },
+            {
+                "name": "url",
+                "label": "Url",
+                "type": "text",
+                "default": "",
+                "info": "Wenn eingetragen, wird der Nutzer bei Klick zur entsprechenden Url weitergeleitet",
+                "group": "",
+                "localize": false,
+                "options": [],
+                "width": "1-1",
+                "lst": true,
+                "acl": []
+            }
+        ],
+        "group": "Demo-Projekt"
+    }
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { axe, render } from '../../utils/testUtils';
+import { axe, render } from '../../../utils/testUtils';
 import Button from './Button';
 
 describe('<Button />', () => {

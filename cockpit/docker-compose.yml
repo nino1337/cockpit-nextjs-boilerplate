@@ -7,5 +7,6 @@ services:
     volumes:
       - ./storage:/var/www/html/storage
       - ./config:/var/www/html/config
+      - ./addons:/var/www/html/addons
     ports:
       - 8080:80
