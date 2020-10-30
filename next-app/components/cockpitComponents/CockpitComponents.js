@@ -1,10 +1,11 @@
 import propTypes from 'prop-types';
 import React from 'react';
 
-import { Button } from '../cockpit';
+import * as CockpitComponent from '../cockpit';
 
 const availableComponents = {
-  button: Button,
+  button: CockpitComponent.Button,
+  heading: CockpitComponent.Heading,
 };
 
 const CockpitComponents = ({ components }) =>
