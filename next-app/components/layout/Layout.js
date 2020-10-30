@@ -1,29 +1,27 @@
 import Head from 'next/head';
-import propTypes from 'prop-types';
 import React, { useContext } from 'react';
 
 import LocalizationContext from '../../localization/context';
+import CockpitComponents from '../cockpitComponents/CockpitComponents';
 import Navigation from '../navigation/Navigation';
+import * as S from './Layout.styles';
 
-const Layout = ({ children }) => {
-  const localizedData = useContext(LocalizationContext);
+const Layout = () => {
+  const { currentPage } = useContext(LocalizationContext);
 
   return (
     <>
       <Head>
-        <title>{localizedData.currentPage.metaTitle}</title>
-        <meta name="description" content={localizedData.currentPage.metaDescription} />
+        <title>{currentPage.metaTitle}</title>
+        <meta name="description" content={currentPage.metaDescription} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation />
-      <h1>{localizedData.currentPage.title}</h1>
-      {children}
+      <S.Main>
+        {currentPage.components && <CockpitComponents components={currentPage.components} />}
+      </S.Main>
     </>
   );
-};
-
-Layout.propTypes = {
-  children: propTypes.any,
 };
 
 export default Layout;

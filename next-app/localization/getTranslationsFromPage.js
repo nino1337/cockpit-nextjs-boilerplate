@@ -26,20 +26,22 @@
  * @param {string} localization - browser language
  * @param {object} data - page props
  */
-const extractDataFromLocalization = (localization, data) => {
-  let normalizedLocalization = localization.length === 5 ? localization.substr(0, 2) : localization;
-  const localizedDataKeys = Object.keys(data).filter(
+const getTranslationsFromPage = (localization, data) => {
+  const normalizedLocalization =
+    localization.length === 5 ? localization.substr(0, 2) : localization;
+  const { currentPage } = data;
+  const localizedDataKeys = Object.keys(currentPage).filter(
     (key) => key.substr(key.length - 3) === `_${normalizedLocalization}`
   );
 
   if (normalizedLocalization === 'de' || localizedDataKeys.length === 0) return data;
 
-  const localizedData = localizedDataKeys.reduce((pageProps, currentKey) => {
+  const localizedPage = localizedDataKeys.reduce((pageProps, currentKey) => {
     const keyWithoutLocalization = currentKey.substr(0, currentKey.length - 3);
-    return { ...pageProps, [keyWithoutLocalization]: data[currentKey] };
+    return { ...pageProps, [keyWithoutLocalization]: currentPage[currentKey] };
   }, {});
 
-  return localizedData;
+  return { ...data, currentPage: localizedPage };
 };
 
-export default extractDataFromLocalization;
+export default getTranslationsFromPage;
