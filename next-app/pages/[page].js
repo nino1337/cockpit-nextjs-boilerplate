@@ -1,8 +1,20 @@
+import Router from 'next/router';
+import { useContext } from 'react';
+
 import { collections, singletons } from '../axios';
 import Layout from '../components/layout/Layout';
+import LocalizationContext from '../localization/context';
 
 export default function Page() {
-  return <Layout />;
+  const { currentPage, pages, siteSettings } = useContext(LocalizationContext);
+
+  // redirect to 404 page if page is not published
+  if (!currentPage.published) {
+    const errorPageSettings = pages.find((page) => page._id === siteSettings[404]._id);
+
+    Router.push(errorPageSettings.url || errorPageSettings.title_slug);
+  }
+  return currentPage.published && <Layout />;
 }
 
 /**
@@ -41,11 +53,12 @@ export async function getStaticPaths() {
  */
 export async function getStaticProps(context) {
   const availablePages = await collections.get('/get/pages');
+  const siteSettings = await singletons.get('/get/siteSettings');
   const pagesData = availablePages.data.find(
     (page) => page.url === context.params.page || page.title_slug === context.params.page
   );
 
   return {
-    props: { currentPage: pagesData, pages: availablePages.data },
+    props: { currentPage: pagesData, pages: availablePages.data, siteSettings: siteSettings.data },
   };
 }

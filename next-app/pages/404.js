@@ -11,6 +11,6 @@ export async function getStaticProps() {
   const pagesData = availablePages.data.find((page) => page._id === siteSettings.data[404]._id);
 
   return {
-    props: { currentPage: pagesData, pages: availablePages.data },
+    props: { currentPage: pagesData, pages: availablePages.data, siteSettings: siteSettings.data },
   };
 }
