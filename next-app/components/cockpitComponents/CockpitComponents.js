@@ -7,16 +7,26 @@ const availableComponents = {
   button: CockpitComponent.Button,
   heading: CockpitComponent.Heading,
   grid: CockpitComponent.Grid,
+  divider: CockpitComponent.Divider,
   text: CockpitComponent.Text,
+  section: CockpitComponent.Section,
+  gallery: CockpitComponent.Gallery,
 };
 
 const CockpitComponents = ({ components }) =>
-  components.map(({ component, settings, columns }, index) => {
+  components.map(({ component, settings, columns, children }, index) => {
     if (!availableComponents[component]) return null;
 
     const Component = availableComponents[component];
 
-    return <Component {...settings} columns={columns} key={`component-${index}`} />;
+    return (
+      <Component
+        {...settings}
+        columns={columns}
+        componentChildren={children}
+        key={`component-${index}`}
+      />
+    );
   });
 
 CockpitComponents.propTypes = {

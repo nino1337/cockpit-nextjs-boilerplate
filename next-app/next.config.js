@@ -4,7 +4,7 @@ module.exports = withImages({
   inlineImageLimit: 16384,
   env: {
     COCKPIT_API_KEY: process.env.COCKPIT_API_KEY,
-    API_BASE_URL: process.env.API_BASE_URL,
+    COCKPIT_BASE_URL: process.env.COCKPIT_BASE_URL,
   },
   tralingSlash: true,
   exportTrailingSlash: true,

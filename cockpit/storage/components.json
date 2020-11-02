@@ -21,15 +21,20 @@
             {
                 "name": "variant",
                 "label": "Variante",
-                "type": "text",
+                "type": "select",
                 "default": "",
                 "info": "Zur Verf\u00fcgung stehen \"ghost\", \"primary\", \"secondary\"",
                 "group": "",
                 "localize": false,
-                "options": [],
+                "options": {
+                    "cls": "",
+                    "options": "primary, secondary, ghost",
+                    "default": "primary"
+                },
                 "width": "1-1",
                 "lst": true,
-                "acl": []
+                "acl": [],
+                "required": true
             },
             {
                 "name": "url",
@@ -40,6 +45,31 @@
                 "group": "",
                 "localize": false,
                 "options": [],
+                "width": "1-1",
+                "lst": true,
+                "acl": []
+            }
+        ],
+        "group": "Demo-Projekt"
+    },
+    "section": {
+        "label": "Section",
+        "dialog": "normal",
+        "children": true,
+        "fields": [
+            {
+                "name": "variant",
+                "label": "Variante",
+                "type": "select",
+                "default": "",
+                "info": "",
+                "group": "",
+                "localize": false,
+                "options": {
+                    "cls": "",
+                    "options": "primary, secondary, accent",
+                    "default": "primary"
+                },
                 "width": "1-1",
                 "lst": true,
                 "acl": []
