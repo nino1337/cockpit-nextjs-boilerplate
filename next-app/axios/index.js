@@ -7,7 +7,7 @@ const PARAMS = {
 };
 
 const singletons = axios.create({
-  baseURL: `${process.env.API_BASE_URL}/api/singletons`,
+  baseURL: `${process.env.COCKPIT_BASE_URL}/api/singletons`,
   ...PARAMS,
 });
 
@@ -33,7 +33,7 @@ const singletons = axios.create({
  * thus, we extract entries in transformResponse as we don't need fields
  */
 const collections = axios.create({
-  baseURL: `${process.env.API_BASE_URL}/api/collections`,
+  baseURL: `${process.env.COCKPIT_BASE_URL}/api/collections`,
   ...PARAMS,
   transformResponse: axios.defaults.transformResponse.concat((data) => {
     return data.entries;
@@ -41,7 +41,7 @@ const collections = axios.create({
 });
 
 const forms = axios.create({
-  baseURL: `${process.env.API_BASE_URL}/api/forms`,
+  baseURL: `${process.env.COCKPIT_BASE_URL}/api/forms`,
   ...PARAMS,
 });
 

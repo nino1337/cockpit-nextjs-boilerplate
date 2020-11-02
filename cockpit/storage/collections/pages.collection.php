@@ -176,7 +176,7 @@
   'sortable' => true,
   'in_menu' => false,
   '_created' => 1603983467,
-  '_modified' => 1604004916,
+  '_modified' => 1604184155,
   'color' => '#FFCE54',
   'acl' => 
   array (
@@ -206,4 +206,9 @@
     ),
   ),
   'icon' => '',
+  'contentpreview' => 
+  array (
+    'enabled' => true,
+    'url' => 'http://localhost:3000/preview',
+  ),
 );
