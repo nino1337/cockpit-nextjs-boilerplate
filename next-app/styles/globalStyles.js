@@ -54,6 +54,7 @@ const dynamicStyle = (theme) => css`
     font-size: 1.6rem;
     line-height: 1.6rem;
     margin: 0;
+    overflow-x: hidden;
   }
 
   img {

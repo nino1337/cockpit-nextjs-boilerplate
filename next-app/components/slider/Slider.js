@@ -5,6 +5,8 @@ import propTypes from 'prop-types';
 import React from 'react';
 import SlickSlider from 'react-slick';
 
+import { Image } from '../cockpit';
+
 const Slider = ({ items, settings = {} }) => {
   const defaultSettings = {
     autoplay: false,
@@ -15,11 +17,7 @@ const Slider = ({ items, settings = {} }) => {
   return (
     <SlickSlider {...sliderSettings}>
       {items.map((item) => (
-        <img
-          alt={item.meta.title}
-          src={process.env.COCKPIT_BASE_URL + item.path}
-          key={item.meta.title}
-        />
+        <Image image={item} key={item.meta.title} />
       ))}
     </SlickSlider>
   );

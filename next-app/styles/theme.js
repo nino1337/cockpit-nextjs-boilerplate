@@ -1,14 +1,34 @@
 import * as helper from './helper';
 
+const shadows = '#1B2D2D';
+const white = '#ffffff';
+const midtones = '#F89B1F';
+const highlights = '#F5E1D3';
+const accent = '#4FBEC4';
+
 const theme = {
   colors: {
-    white: '#ffffff',
+    white,
     grey: '#333333',
     error: '#e85555',
-    text: '#1B2D2D',
-    primary: helper.getDesaturatedColor('#F89B1F'),
-    secondary: helper.getDesaturatedColor('#F5E1D3'),
-    accent: helper.getDesaturatedColor('#4FBEC4'),
+    text: shadows,
+    primary: midtones,
+    secondary: highlights,
+    accent,
+    sections: {
+      primary: {
+        text: helper.getTextColor(helper.getDesaturatedColor(midtones), shadows, white),
+        background: helper.getDesaturatedColor(midtones),
+      },
+      secondary: {
+        text: helper.getTextColor(helper.getDesaturatedColor(highlights), shadows, white),
+        background: helper.getDesaturatedColor(highlights),
+      },
+      accent: {
+        text: helper.getTextColor(helper.getDesaturatedColor(accent), shadows, white),
+        background: helper.getDesaturatedColor(accent),
+      },
+    },
   },
   fonts: {
     primary: 'Sofia',

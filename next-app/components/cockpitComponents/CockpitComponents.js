@@ -11,6 +11,7 @@ const availableComponents = {
   text: CockpitComponent.Text,
   section: CockpitComponent.Section,
   gallery: CockpitComponent.Gallery,
+  image: CockpitComponent.Image,
 };
 
 const CockpitComponents = ({ components }) =>
