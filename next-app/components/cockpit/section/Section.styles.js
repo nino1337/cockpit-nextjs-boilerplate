@@ -15,23 +15,27 @@ export const Section = styled.section`
     variant === 'white' &&
     css`
       background-color: ${theme.colors.white};
+      color: ${theme.colors.text};
     `}
 
   ${({ variant, theme }) =>
     variant === 'primary' &&
     css`
-      background-color: ${theme.colors.primary};
+      background-color: ${theme.colors.sections.primary.background};
+      color: ${theme.colors.sections.primary.text};
     `}
 
   ${({ variant, theme }) =>
     variant === 'secondary' &&
     css`
-      background-color: ${theme.colors.secondary};
+      background-color: ${theme.colors.sections.secondary.background};
+      color: ${theme.colors.sections.secondary.text};
     `}
 
   ${({ variant, theme }) =>
     variant === 'accent' &&
     css`
-      background-color: ${theme.colors.accent};
+      background-color: ${theme.colors.sections.accent.background};
+      color: ${theme.colors.sections.accent.text};
     `}
 `;

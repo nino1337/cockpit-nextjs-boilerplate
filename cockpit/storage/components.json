@@ -67,9 +67,23 @@
                 "localize": false,
                 "options": {
                     "cls": "",
-                    "options": "primary, secondary, accent",
-                    "default": "primary"
+                    "options": "primary, secondary, accent, white",
+                    "default": "white"
                 },
+                "width": "1-1",
+                "lst": true,
+                "acl": [],
+                "required": true
+            },
+            {
+                "name": "isFullWidth",
+                "label": "Volle Breite",
+                "type": "boolean",
+                "default": "",
+                "info": "",
+                "group": "",
+                "localize": false,
+                "options": [],
                 "width": "1-1",
                 "lst": true,
                 "acl": []
