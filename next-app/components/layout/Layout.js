@@ -14,6 +14,7 @@ const Layout = () => {
       <Head>
         <title>{currentPage.metaTitle}</title>
         <meta name="description" content={currentPage.metaDescription} />
+        {!currentPage.indexable && <meta name="robots" content="noindex" />}
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation />

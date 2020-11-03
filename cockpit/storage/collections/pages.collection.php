@@ -45,6 +45,25 @@
     ),
     2 => 
     array (
+      'name' => 'indexable',
+      'label' => 'Für Suchmaschinen veröffentlichen',
+      'type' => 'boolean',
+      'default' => '',
+      'info' => '',
+      'group' => 'Meta-Information',
+      'localize' => false,
+      'options' => 
+      array (
+        'default' => true,
+      ),
+      'width' => '1-1',
+      'lst' => false,
+      'acl' => 
+      array (
+      ),
+    ),
+    3 => 
+    array (
       'name' => 'title',
       'label' => '',
       'type' => 'text',
@@ -63,7 +82,7 @@
       ),
       'required' => true,
     ),
-    3 => 
+    4 => 
     array (
       'name' => 'url',
       'label' => 'Url-Slug',
@@ -82,7 +101,7 @@
       ),
       'required' => false,
     ),
-    4 => 
+    5 => 
     array (
       'name' => 'published',
       'label' => 'Published',
@@ -100,7 +119,7 @@
       array (
       ),
     ),
-    5 => 
+    6 => 
     array (
       'name' => 'menu',
       'label' => 'Menü',
@@ -131,7 +150,7 @@
       array (
       ),
     ),
-    6 => 
+    7 => 
     array (
       'name' => 'subPages',
       'label' => 'Unterseiten',
@@ -153,14 +172,14 @@
       array (
       ),
     ),
-    7 => 
+    8 => 
     array (
       'name' => 'components',
       'label' => 'Elemente',
       'type' => 'layout',
       'default' => '',
       'info' => '',
-      'group' => '',
+      'group' => 'Content',
       'localize' => true,
       'options' => 
       array (
@@ -170,13 +189,13 @@
       'acl' => 
       array (
       ),
-      'required' => false,
+      'required' => true,
     ),
   ),
   'sortable' => true,
   'in_menu' => false,
   '_created' => 1603983467,
-  '_modified' => 1604184155,
+  '_modified' => 1604407950,
   'color' => '#FFCE54',
   'acl' => 
   array (
