@@ -113,7 +113,7 @@
       'options' => 
       array (
       ),
-      'width' => '1-3',
+      'width' => '1-2',
       'lst' => true,
       'acl' => 
       array (
@@ -144,7 +144,7 @@
           ),
         ),
       ),
-      'width' => '1-3',
+      'width' => '1-2',
       'lst' => false,
       'acl' => 
       array (
@@ -157,7 +157,7 @@
       'type' => 'collectionlink',
       'default' => '',
       'info' => '',
-      'group' => '',
+      'group' => 'Unterseiten',
       'localize' => false,
       'options' => 
       array (
@@ -166,7 +166,7 @@
         'multiple' => true,
         'limit' => false,
       ),
-      'width' => '1-3',
+      'width' => '1-1',
       'lst' => false,
       'acl' => 
       array (
@@ -195,7 +195,7 @@
   'sortable' => true,
   'in_menu' => false,
   '_created' => 1603983467,
-  '_modified' => 1604407950,
+  '_modified' => 1604409791,
   'color' => '#FFCE54',
   'acl' => 
   array (

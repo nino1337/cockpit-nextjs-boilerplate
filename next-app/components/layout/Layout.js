@@ -7,15 +7,17 @@ import Navigation from '../navigation/Navigation';
 import * as S from './Layout.styles';
 
 const Layout = () => {
-  const { currentPage } = useContext(LocalizationContext);
+  const { currentPage, siteSettings } = useContext(LocalizationContext);
 
   return (
     <>
       <Head>
-        <title>{currentPage.metaTitle}</title>
+        <title>{`${siteSettings.name} ${
+          currentPage.metaTitle && '| ' + currentPage.metaTitle
+        }`}</title>
         <meta name="description" content={currentPage.metaDescription} />
         {!currentPage.indexable && <meta name="robots" content="noindex" />}
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={process.env.COCKPIT_BASE_URL + siteSettings.favIcon.path} />
       </Head>
       <Navigation />
       <S.Main>

@@ -1,9 +1,8 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
-export const Button = styled.button`
-  appearance: none;
-  border: none;
+export const Button = styled.a`
+  cursor: pointer;
   border-radius: 3px;
   display: block;
   min-width: 200px;

@@ -108,10 +108,29 @@
       ),
       'required' => true,
     ),
+    5 => 
+    array (
+      'name' => 'favIcon',
+      'label' => 'Favicon',
+      'type' => 'image',
+      'default' => '',
+      'info' => '',
+      'group' => '',
+      'localize' => false,
+      'options' => 
+      array (
+      ),
+      'width' => '1-4',
+      'lst' => true,
+      'acl' => 
+      array (
+      ),
+      'required' => true,
+    ),
   ),
   'data' => NULL,
   '_created' => 1603984709,
-  '_modified' => 1604003002,
+  '_modified' => 1604592888,
   'description' => '',
   'acl' => 
   array (

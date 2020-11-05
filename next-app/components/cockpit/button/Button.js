@@ -4,7 +4,6 @@ import React from 'react';
 import * as S from './Button.styles';
 
 const Button = ({ text, variant = 'primary', disabled = false, url }) => {
-  console.log(variant);
   return (
     <S.Button variant={variant} disabled={disabled} href={url}>
       {text}
