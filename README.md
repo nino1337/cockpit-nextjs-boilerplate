@@ -74,4 +74,4 @@ Before starting to set up the workflow, make sure to have **Node** and **docker*
   
 #### Add Layout Components
 
-- navigate to settings -> Layout Components, to add your own components
+- in cockpit navigate to settings -> Layout Components, to add your own components
