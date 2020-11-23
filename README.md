@@ -71,3 +71,7 @@ Before starting to set up the workflow, make sure to have **Node** and **docker*
 - in cockpit under http://localhost:8080/restadmin/index a MASTER API Key is created, that must match the COCKPIT_API_KEY in our .env.local file
   ![Cockpit CMS Master API Key](/docs/assets/cockpit-master-api-key.png)
   ![env VARIABLES](/docs/assets/env-vars.png)
+  
+#### Add Layout Components
+
+- in cockpit navigate to settings -> Layout Components, to add your own components
