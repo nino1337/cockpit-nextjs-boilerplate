@@ -20,15 +20,18 @@ function MyApp({ Component, pageProps }) {
     // keep app state in sync with current page
   }, [router.asPath]);
 
+  console.log(localizedData);
+
   return (
-    <ThemeProvider theme={theme}>
-      <Global styles={globalStyle} />
-      {localizedData && (
+    localizedData && (
+      <ThemeProvider theme={theme(localizedData.siteSettings)}>
+        <Global styles={globalStyle} />
+
         <LocalizationContext.Provider value={localizedData}>
           <Component {...pageProps} />
         </LocalizationContext.Provider>
-      )}
-    </ThemeProvider>
+      </ThemeProvider>
+    )
   );
 }
 

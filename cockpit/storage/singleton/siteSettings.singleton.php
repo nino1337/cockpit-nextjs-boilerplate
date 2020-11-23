@@ -127,10 +127,82 @@
       ),
       'required' => true,
     ),
+    6 => 
+    array (
+      'name' => 'primaryColor',
+      'label' => 'Primary Farbe',
+      'type' => 'color',
+      'default' => '',
+      'info' => '',
+      'group' => 'Theme',
+      'localize' => false,
+      'options' => 
+      array (
+      ),
+      'width' => '1-4',
+      'lst' => true,
+      'acl' => 
+      array (
+      ),
+    ),
+    7 => 
+    array (
+      'name' => 'secondaryColor',
+      'label' => 'Secondary Farbe',
+      'type' => 'color',
+      'default' => '',
+      'info' => '',
+      'group' => 'Theme',
+      'localize' => false,
+      'options' => 
+      array (
+      ),
+      'width' => '1-4',
+      'lst' => true,
+      'acl' => 
+      array (
+      ),
+    ),
+    8 => 
+    array (
+      'name' => 'textColor',
+      'label' => 'Text Farbe',
+      'type' => 'color',
+      'default' => '',
+      'info' => '',
+      'group' => 'Theme',
+      'localize' => false,
+      'options' => 
+      array (
+      ),
+      'width' => '1-4',
+      'lst' => true,
+      'acl' => 
+      array (
+      ),
+    ),
+    9 => 
+    array (
+      'name' => 'accentColor',
+      'label' => 'Accent Farbe',
+      'type' => 'color',
+      'default' => '',
+      'info' => '',
+      'group' => 'Theme',
+      'localize' => false,
+      'options' => 
+      array (
+      ),
+      'width' => '1-4',
+      'lst' => true,
+      'acl' => 
+      array (
+      ),
+    ),
   ),
   'data' => NULL,
   '_created' => 1603984709,
-  '_modified' => 1604592888,
+  '_modified' => 1606149191,
   'description' => '',
   'acl' => 
   array (

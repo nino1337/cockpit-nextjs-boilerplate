@@ -1,32 +1,24 @@
-import * as helper from './helper';
-
-const shadows = '#1B2D2D';
-const white = '#ffffff';
-const midtones = '#F89B1F';
-const highlights = '#F5E1D3';
-const accent = '#4FBEC4';
-
-const theme = {
+const theme = (settings) => ({
   colors: {
-    white,
+    white: '#ffffff',
     grey: '#333333',
     error: '#e85555',
-    text: shadows,
-    primary: midtones,
-    secondary: highlights,
-    accent,
+    text: settings.textColor,
+    primary: settings.primaryColor,
+    secondary: settings.secondaryColor,
+    accent: settings.accentColor,
     sections: {
       primary: {
-        text: helper.getTextColor(helper.getDesaturatedColor(midtones), shadows, white),
-        background: helper.getDesaturatedColor(midtones),
+        text: settings.textColor,
+        background: settings.primaryColor,
       },
       secondary: {
-        text: helper.getTextColor(helper.getDesaturatedColor(highlights), shadows, white),
-        background: helper.getDesaturatedColor(highlights),
+        text: settings.textColor,
+        background: settings.secondaryColor,
       },
       accent: {
-        text: helper.getTextColor(helper.getDesaturatedColor(accent), shadows, white),
-        background: helper.getDesaturatedColor(accent),
+        text: settings.textColor,
+        background: settings.accentColor,
       },
     },
   },
@@ -34,6 +26,6 @@ const theme = {
     primary: 'Sofia',
     secondary: 'Avantgarde',
   },
-};
+});
 
 export default theme;
