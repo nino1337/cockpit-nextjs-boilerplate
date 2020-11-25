@@ -1,37 +1,32 @@
 import { Global } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
-import { useRouter } from 'next/router';
+import Router from 'next/router';
 import propTypes from 'prop-types';
-import { useEffect, useState } from 'react';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import LocalizationContext from '../localization/context';
-import getTranslationsFromPage from '../localization/getTranslationsFromPage';
 import globalStyle from '../styles/globalStyles';
 import theme from '../styles/theme';
 function MyApp({ Component, pageProps }) {
-  const [localizedData, setLocalizedData] = useState(null);
-  const router = useRouter();
-
   useEffect(() => {
-    const navigatorLanguage = navigator.language || navigator.userLanguage;
+    // redirect to 404 page if page is not published
+    if (!pageProps.currentPage || !pageProps.currentPage.published) {
+      const errorPageSettings = pageProps.pages.find(
+        (page) => page._id === pageProps.siteSettings[404]._id
+      );
 
-    setLocalizedData(getTranslationsFromPage(navigatorLanguage, pageProps));
-    // keep app state in sync with current page
-  }, [router.asPath]);
-
-  console.log(localizedData);
+      Router.push(errorPageSettings.url || errorPageSettings.title_slug);
+    }
+  }, []);
 
   return (
-    localizedData && (
-      <ThemeProvider theme={theme(localizedData.siteSettings)}>
-        <Global styles={globalStyle} />
+    <ThemeProvider theme={theme(pageProps.siteSettings)}>
+      <Global styles={globalStyle} />
 
-        <LocalizationContext.Provider value={localizedData}>
-          <Component {...pageProps} />
-        </LocalizationContext.Provider>
-      </ThemeProvider>
-    )
+      <LocalizationContext.Provider value={pageProps}>
+        <Component {...pageProps} />
+      </LocalizationContext.Provider>
+    </ThemeProvider>
   );
 }
 

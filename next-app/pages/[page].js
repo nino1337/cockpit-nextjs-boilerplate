@@ -1,4 +1,3 @@
-import Router from 'next/router';
 import { useContext } from 'react';
 
 import { collections, singletons } from '../axios';
@@ -6,14 +5,8 @@ import Layout from '../components/layout/Layout';
 import LocalizationContext from '../localization/context';
 
 export default function Page() {
-  const { currentPage, pages, siteSettings } = useContext(LocalizationContext);
+  const { currentPage } = useContext(LocalizationContext);
 
-  // redirect to 404 page if page is not published
-  if (!currentPage.published) {
-    const errorPageSettings = pages.find((page) => page._id === siteSettings[404]._id);
-
-    Router.push(errorPageSettings.url || errorPageSettings.title_slug);
-  }
   return currentPage.published && <Layout />;
 }
 

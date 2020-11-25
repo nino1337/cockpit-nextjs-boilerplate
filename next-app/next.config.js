@@ -6,7 +6,7 @@ module.exports = withImages({
     COCKPIT_API_KEY: process.env.COCKPIT_API_KEY,
     COCKPIT_BASE_URL: process.env.COCKPIT_BASE_URL,
   },
-  tralingSlash: true,
+  trailingSlash: true,
   exportTrailingSlash: true,
   webpack: (config) => {
     config.module.rules.push({

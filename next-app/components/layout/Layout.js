@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import React, { useContext } from 'react';
 
-import LocalizationContext from '../../localization/context';
+import context from '../../localization/context';
 import CockpitComponents from '../cockpitComponents/CockpitComponents';
 import Navigation from '../navigation/Navigation';
 import * as S from './Layout.styles';
 
 const Layout = () => {
-  const { currentPage, siteSettings } = useContext(LocalizationContext);
+  const { currentPage, siteSettings } = useContext(context);
 
   return (
     <>
