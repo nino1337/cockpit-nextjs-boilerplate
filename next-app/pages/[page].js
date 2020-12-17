@@ -53,5 +53,6 @@ export async function getStaticProps(context) {
 
   return {
     props: { currentPage: pagesData, pages: availablePages.data, siteSettings: siteSettings.data },
+    revalidate: 1,
   };
 }

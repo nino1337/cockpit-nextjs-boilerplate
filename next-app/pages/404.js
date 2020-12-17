@@ -12,5 +12,6 @@ export async function getStaticProps() {
 
   return {
     props: { currentPage: pagesData, pages: availablePages.data, siteSettings: siteSettings.data },
+    revalidate: 1,
   };
 }
