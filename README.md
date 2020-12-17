@@ -16,7 +16,7 @@ This repository serves as a boilerplate to kickstart projects, where a content-m
 - [Homepage](https://nextjs.org/)
 - [Github Repository](https://github.com/vercel/next.js/)
 
-[Next.js](https://nextjs.org/) on the other hand is used to generate our [static web page](https://en.wikipedia.org/wiki/Static_web_page). While exporting our app, it will pre-render every page, we defined, which brings several advantages, like SEO-friendliness and performance boosts.
+[Next.js](https://nextjs.org/) on the other hand is used as our server side renderer. It uses nodejs to render React on the server, so make sure to have a host, that can run node.
 
 ### Jest
 
